@@ -1,0 +1,11 @@
+@use "./variables" as *;
+
+.logo {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+.contactButton {
+  background-image: $gradient-solar;
+  border-radius: 10px;
+}

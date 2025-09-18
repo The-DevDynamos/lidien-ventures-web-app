@@ -1,0 +1,8 @@
+$solar-yellow: 48 96% 55%;
+$solar-orange: 35 84% 55%;
+
+$gradient-solar: linear-gradient(
+  135deg,
+  hsl($solar-yellow),
+  hsl($solar-orange)
+);
