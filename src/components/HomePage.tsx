@@ -14,8 +14,6 @@ export default function HomePage() {
       <main>
         {/* page hero */}
         <HeroSection />
-        {/* energy saver calculator */}
-        <EnergySavingsCalculator />
         {/* solutions section */}
         <SolutionsSection />
         {/* why trust in us */}

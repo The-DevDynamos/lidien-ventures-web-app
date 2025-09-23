@@ -45,19 +45,19 @@ const CTASection = () => {
           </div>
 
           {/* Statistics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto text-white">
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-white">
             <div>
-              <div className="text-3xl md:text-4xl font-bold">50K+</div>
+              <div className="text-xl md:text-4xl font-bold">50K+</div>
               <div className="text-white/80 text-sm">Tons CO₂ Saved</div>
             </div>
 
             <div>
-              <div className="text-3xl md:text-4xl font-bold">15K+</div>
+              <div className="text-xl md:text-4xl font-bold">15K+</div>
               <div className="text-white/80 text-sm">Families Served</div>
             </div>
 
             <div>
-              <div className="text-3xl md:text-4xl font-bold">2M+</div>
+              <div className="text-xl md:text-4xl font-bold">2M+</div>
               <div className="text-white/80 text-sm">Liters Water Pumped</div>
             </div>
           </div>

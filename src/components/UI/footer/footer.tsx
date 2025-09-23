@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   FaFacebook,
@@ -101,12 +102,12 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/shop"
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Shop
-                </a>
+                </Link>
               </li>
               <li>
                 <a

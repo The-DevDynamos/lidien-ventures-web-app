@@ -9,6 +9,8 @@
   --color-earth-brown: #5C4B37;
   --color-solar: #F2C94C;
   --color-gradient-solar: linear-gradient(90deg, #F2C94C, #F2994A);
+  --color-gray-fade: #F5F5F5;
+  --color-solar-orange: hsl(35 84% 55%; );
   --shadow-energy: 0 4px 14px 0 rgba(242, 201, 76, 0.4);
 }
 

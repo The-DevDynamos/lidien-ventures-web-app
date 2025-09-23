@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const HeroSection = () => {
@@ -40,13 +41,19 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="bg-gradient-to-r text-white-200 from-[hsl(48_96%_55%)] to-[hsl(35_84%_55%)] font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 h-14 rounded-lg text-lg px-8 py-4">
+            <Link
+              href={"/shop"}
+              className="bg-gradient-to-r text-white-200 from-[hsl(48_96%_55%)] to-[hsl(35_84%_55%)] font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 h-14 rounded-lg text-lg px-8 py-4"
+            >
               Shop Supplies
-            </button>
+            </Link>
 
-            <button className="border-2 border-white bg-transparent text-white font-medium transition-all duration-200 h-14 rounded-lg text-lg px-8 py-4 hover:bg-white hover:text-gray-900">
+            <Link
+              href={"/contact"}
+              className="border-2 border-white bg-transparent text-white font-medium transition-all duration-200 h-14 rounded-lg text-lg px-8 py-4 hover:bg-white hover:text-gray-900"
+            >
               Request a Quote
-            </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-3 gap-4 text-white">

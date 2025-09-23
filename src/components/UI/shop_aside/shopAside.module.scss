@@ -1,0 +1,241 @@
+// scss
+.sideSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 300px;
+  flex-shrink: 0;
+
+  @media (max-width: 1050px) {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
+.searchBox {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.2rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.filterSection {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+
+  // Hide filter section by default on mobile
+  @media (max-width: 1050px) {
+    display: none;
+
+    &.mobileOpen {
+      display: block;
+    }
+  }
+}
+
+.filterTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  &:hover {
+    background: #f9fafb;
+  }
+
+  &.active {
+    background: #f0f9ff;
+    color: #0369a1;
+    font-weight: 500;
+  }
+}
+
+.categoryName {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.categoryCount {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.categoryIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #6b7280;
+}
+.cartSectionContainer {
+  @media (max-width: 1050px) {
+    display: none;
+  }
+  .cartSection {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #f3f4f6;
+  }
+}
+.cartTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #6b7280;
+}
+
+.emptyCartIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #d1d5db;
+}
+
+.emptyCartText {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.continueShopping {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background: #2563eb;
+  }
+}
+
+// Mobile filter toggle button
+.mobileFilterToggle {
+  display: none;
+  background: #178548;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background: #0b8a44;
+  }
+
+  @media (max-width: 1050px) {
+    display: flex;
+  }
+}
+
+// Mobile responsive styles
+@media (max-width: 1050px) {
+  .sideSection {
+    width: 100%;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .searchBox {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .filterSection {
+    flex: 1;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sideSection {
+    flex-direction: column-reverse;
+  }
+
+  .filterSection {
+    min-width: 100%;
+  }
+}

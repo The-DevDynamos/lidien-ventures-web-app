@@ -10,6 +10,10 @@ import {
   FiX,
 } from "react-icons/fi";
 import styles from "@/assets/styles/navbar.module.scss";
+import Link from "next/link";
+import Cart from "../cart_section/cart";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,6 +21,8 @@ const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<string[]>([]);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
+  const { items } = useSelector((state: RootState) => state.cart);
 
   const searchRef = useRef<HTMLDivElement>(null);
   const solutionsRef = useRef<HTMLDivElement>(null);
@@ -82,6 +88,10 @@ const Navbar = () => {
     "About Us",
   ];
 
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   return (
     <nav className="bg-white shadow-md p-3 fixed top-0 w-screen z-100">
       {/* Top bar */}
@@ -139,7 +149,13 @@ const Navbar = () => {
             <span>My Account</span>
           </div>
 
-          <div className="flex items-center cursor-pointer hover:text-green-600">
+          <div
+            className="flex items-center cursor-pointer hover:text-green-600"
+            onClick={toggleCart}
+          >
+            {items.length > 0 && (
+              <div className="bg-green-600 absolute w-[10px] h-[10px] rounded-full ml-12 mb-4 animate-pulse"></div>
+            )}
             <FiShoppingCart className="mr-1" />
             <span>Cart</span>
           </div>
@@ -158,7 +174,9 @@ const Navbar = () => {
           <div className="flex items-center">
             {/* Business Name */}
             <div className="text-2xl font-bold text-green-700 mr-4">
-              <h1 className={`${styles.logo}`}>Lidienventures</h1>
+              <Link href="/" className={`${styles.logo}`}>
+                Lidienventures
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
@@ -181,25 +199,25 @@ const Navbar = () => {
                     {isSolutionsOpen && (
                       <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50 border border-green-100">
                         {solutionsItems.map((solution, index) => (
-                          <a
+                          <Link
                             key={index}
-                            href="#"
+                            href={`/solutions/${solution}`}
                             className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-600"
                           >
                             {solution}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     )}
                   </div>
                 ) : (
-                  <a
+                  <Link
                     key={index}
-                    href="#"
+                    href={item.toLocaleLowerCase().split(" ").join("_")}
                     className="text-gray-700 hover:text-green-600"
                   >
                     {item}
-                  </a>
+                  </Link>
                 )
               )}
             </div>
@@ -207,12 +225,12 @@ const Navbar = () => {
 
           {/* Contact on far right */}
           <div className="hidden md:block">
-            <a
-              href="#"
+            <Link
+              href="/contact"
               className={`text-white py-3 px-4 hover:text-gray-300 font-medium ${styles.contactButton}`}
             >
               Get a Quote
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -246,13 +264,13 @@ const Navbar = () => {
                 {isSolutionsOpen && (
                   <div className="pl-4 mt-1 space-y-1">
                     {solutionsItems.map((item, index) => (
-                      <a
+                      <Link
                         key={index}
-                        href="#"
+                        href={`/solutions/${item}`}
                         className="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded-md"
                       >
                         {item}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -261,24 +279,28 @@ const Navbar = () => {
               {navItems
                 .filter((item) => item !== "Solutions")
                 .map((item, index) => (
-                  <a
+                  <Link
                     key={index}
-                    href="#"
+                    href={item.toLocaleLowerCase().split(" ").join("_")}
                     className="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded-md"
                   >
                     {item}
-                  </a>
+                  </Link>
                 ))}
 
-              <a
-                href="#"
+              <Link
+                href="/contact"
                 className={`text-white text-center py-3 px-4 block w-full mt-4 hover:text-gray-300 font-medium ${styles.contactButton}`}
               >
                 Get a Quote
-              </a>
+              </Link>
             </div>
           </div>
         )}
+      </div>
+      {/* cart */}
+      <div>
+        <Cart isOpen={isCartOpen} onClose={toggleCart} />
       </div>
     </nav>
   );
