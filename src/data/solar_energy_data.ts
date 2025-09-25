@@ -1,0 +1,133 @@
+// data/solutions/solar-energy-data.ts
+import { type SolarEnergyCategory } from "@/components/UI/solutions/types/solar_energy";
+
+export const solarEnergyData: SolarEnergyCategory = {
+  id: "solar-energy",
+  slug: "solar-energy-solutions",
+  name: "Solar Energy Solutions",
+  description:
+    "Comprehensive solar energy systems for various applications and scales",
+  icon: "⚡",
+  solutions: [
+    {
+      id: "solar-grid-tie-001",
+      slug: "grid-tie-solar-systems",
+      title: "Grid-Tie Solar Systems",
+      shortDescription:
+        "Solar systems connected to the main grid for maximum efficiency and cost savings",
+      fullDescription:
+        "Our grid-tie solar systems allow you to generate your own electricity while remaining connected to the main grid. Excess power is fed back to the grid, potentially earning you credits while ensuring uninterrupted power supply.",
+      features: [
+        "Grid synchronization",
+        "Net metering capability",
+        "Real-time monitoring",
+        "Automatic grid switching",
+        "High-efficiency inverters",
+        "Remote system management",
+        "Performance analytics",
+      ],
+      specifications: {
+        capacity: "1kW - 100kW+",
+        efficiency: "Up to 22% system efficiency",
+        warranty: "25 years on panels, 10 years on inverters",
+        installation: "3-10 days",
+        output: "Reduced electricity bills by 50-100%",
+        lifespan: "25+ years",
+      },
+      price: 120000,
+      image: "/images/solutions/solar_power_generation_3.jpg",
+      category: "solar",
+      subcategory: "Grid-Tie Systems",
+      isFeatured: true,
+      benefits: [
+        "Significant electricity savings",
+        "Earn from excess power",
+        "Low maintenance",
+        "Environmentally friendly",
+        "Increase property value",
+      ],
+      applications: [
+        "Residential homes",
+        "Commercial buildings",
+        "Schools and institutions",
+        "Shopping centers",
+        "Office complexes",
+      ],
+      panelTypes: ["Monocrystalline", "Polycrystalline", "Thin-film"],
+      inverterTypes: ["String inverters", "Microinverters", "Hybrid inverters"],
+      mountingSystems: ["Roof-mounted", "Ground-mounted", "Carport systems"],
+      monitoringSystems: [
+        "Web-based",
+        "Mobile apps",
+        "Energy management systems",
+      ],
+      gallery: [
+        "/images/solutions/solar_power_generation_3.jpg",
+        "/images/solutions/solar_power_generation_2.jpg",
+        "/images/solutions/solar_power_generation_1.jpg",
+      ],
+    },
+    {
+      id: "solar-off-grid-001",
+      slug: "off-grid-solar-systems",
+      title: "Off-Grid Solar Systems",
+      shortDescription:
+        "Complete energy independence with off-grid solar power systems",
+      fullDescription:
+        "Our off-grid solar systems provide complete energy independence for locations without grid access. These systems include solar panels, batteries, charge controllers, and inverters to power your home or business 24/7.",
+      features: [
+        "Battery storage systems",
+        "Charge controllers",
+        "Power inverters",
+        "Energy management",
+        "Backup generator integration",
+        "Remote monitoring",
+        "Expandable design",
+      ],
+      specifications: {
+        capacity: "500W - 50kW systems",
+        efficiency: "85-95% round-trip efficiency",
+        warranty: "10 years on batteries, 25 years on panels",
+        installation: "5-14 days",
+        output: "Complete energy independence",
+        lifespan: "10-25 years depending on components",
+      },
+      price: 200000,
+      image: "/images/solutions/solar_power_generation_2.jpg",
+      category: "solar",
+      subcategory: "Off-Grid Systems",
+      isFeatured: true,
+      benefits: [
+        "Complete energy independence",
+        "No electricity bills",
+        "Reliable power anywhere",
+        "Scalable solutions",
+        "Low operating costs",
+      ],
+      applications: [
+        "Remote homes",
+        "Agricultural farms",
+        "Telecom towers",
+        "Tourist lodges",
+        "Construction sites",
+      ],
+      panelTypes: ["High-efficiency monocrystalline", "Bifacial panels"],
+      inverterTypes: [
+        "Off-grid inverters",
+        "Inverter/chargers",
+        "MPPT charge controllers",
+      ],
+      mountingSystems: ["Ground mounts", "Pole mounts", "Tracking systems"],
+      monitoringSystems: [
+        "Battery monitoring",
+        "Load management",
+        "Remote control",
+      ],
+      gallery: [
+        "/images/solutions/solar_power_generation_3.jpg",
+        "/images/solutions/solar_power_generation_2.jpg",
+        "/images/solutions/solar_power_generation_1.jpg",
+      ],
+    },
+  ],
+};

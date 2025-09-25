@@ -104,7 +104,11 @@ const CartSection: React.FC<CartSectionProps> = ({
         </div>
       )}
 
-      <div className={styles.cartItems}>
+      <div
+        className={`${styles.cartItems} ${
+          isSideCart ? "rounded-none" : "rounded-md"
+        }`}
+      >
         {cartItems.map((item) => (
           <div key={item.id} className={styles.cartItem}>
             <img

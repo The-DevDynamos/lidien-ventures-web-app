@@ -1,12 +1,10 @@
-import Navbar from "@/components/UI/navbar/navbar";
+import AllSolutionsPage from "@/components/UI/solutions/allSolutions";
 import React from "react";
 
-const SolutionsPage: React.FC = () => {
+export default function page() {
   return (
     <div>
-      <Navbar />
+      <AllSolutionsPage />
     </div>
   );
-};
-
-export default SolutionsPage;
+}

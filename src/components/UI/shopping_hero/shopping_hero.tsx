@@ -9,7 +9,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-[300px] flex items-center justify-center overflow-hidden bottom-8 pt-24 pb-16 bg-gradient-to-br from-[hsl(142_76%_36%_/_0.9)] via-[hsla(142,62%,20%,1)] to-[#05903b]">
+    <section className="relative h-[300px] flex items-center justify-center overflow-hidden pt-24 pb-16 bg-gradient-to-br from-[hsl(142_76%_36%_/_0.9)] via-[hsla(142,62%,20%,1)] to-[#05903b]">
       <div className="relative z-10 container mx-auto px-4 text-center text-white ">
         <div className="max-w-4xl mx-auto ">
           <h1

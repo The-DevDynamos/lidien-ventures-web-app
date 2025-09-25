@@ -78,22 +78,25 @@ export default function Cart({ isOpen, onClose }: CartProps) {
     <>
       {/* Backdrop with opacity */}
       <div
-        className="fixed inset-0 bg-gray-700/50 z-40 transition-opacity duration-300"
+        className="fixed inset-0 h-[100vh] bg-gray-700/50 transition-opacity duration-300"
         aria-hidden="true"
+        style={{
+          zIndex: 100,
+        }}
       />
 
       {/* Cart container */}
       <div
         id="mobile-cart"
         className={`
-          fixed top-0 right-0 h-full w-full max-w-md z-50
+          fixed top-0 right-0 h-[100vh] w-full max-w-md z-100
           transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
         <div className="bg-white h-full flex flex-col relative">
           {/* Header with close button */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-800">
+          <div className="flex items-center justify-between p-4 border-b border-gray-200">
             <h2 className="text-xl font-semibold">Your Cart</h2>
             <button
               onClick={onClose}

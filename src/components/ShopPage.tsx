@@ -1,10 +1,10 @@
 "use client";
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import ShoppingHero from "./UI/shopping_hero/shopping_hero";
 import ShopTopBar from "./UI/shop_topbar/shopTopBar";
 import ProductsSection from "./UI/products_section/productsSection";
 import SideSection from "./UI/shop_aside/shopAside";
-import { mockProducts } from "@/data/mock_products";
+import { mockProducts } from "@/data/productsData";
 import { Category } from "./UI/shop_aside/shopAside";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/store/store";
@@ -127,7 +127,7 @@ export default function ShopPage() {
   return (
     <div>
       <ShoppingHero />
-      <div className="mx-auto lg:grid lg:grid-cols-[300px_1fr] gap-4 flex flex-col -mt-8 min-h-svh">
+      <div className="mx-auto lg:grid lg:grid-cols-[300px_1fr] gap-4 flex flex-col mt-8 min-h-svh">
         {/* Side Section - Navigation, Search, and Cart */}
         <aside className="p-6">
           <SideSection

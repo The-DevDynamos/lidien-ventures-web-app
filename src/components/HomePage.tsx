@@ -1,6 +1,5 @@
 import CTASection from "./UI/cta_section/cta_section";
 import CustomerStoriesSection from "./UI/customer_stories/customer_stories";
-import EnergySavingsCalculator from "./UI/energy_savings/energy_savings";
 import Footer from "./UI/footer/footer";
 import HeroSection from "./UI/hero/hero";
 import Navbar from "./UI/navbar/navbar";
@@ -25,6 +24,13 @@ export default function HomePage() {
       </main>
       {/* page footer */}
       <Footer />
+      {/* Eco-Friendly Footer Note */}
+      <div className="bg-green-900 text-green-100 py-6 text-center">
+        <p className="text-sm">
+          🌍 Every solution contributes to a sustainable future. Together,
+          we&lsquo;re building a greener planet.
+        </p>
+      </div>
     </div>
   );
 }

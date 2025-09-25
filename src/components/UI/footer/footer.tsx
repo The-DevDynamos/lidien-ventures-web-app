@@ -63,36 +63,36 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/solutions/category/lpg-distribution-solutions"
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   LPG Distribution
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/solutions/category/solar-power-solutions"
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Solar Energy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/solutions/category/biogas-solutions"
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Biogas Solutions
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/solutions/category/solar-boreholes-solutions"
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Solar Boreholes
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

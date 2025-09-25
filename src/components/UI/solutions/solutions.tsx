@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FiSun, FiDroplet, FiArrowRight } from "react-icons/fi";
 import { LuFuel, LuLeafyGreen } from "react-icons/lu";
 
@@ -7,10 +8,11 @@ const SolutionsSection = () => {
       id: 1,
       icon: <LuFuel className="w-8 h-8 text-orange-500" />,
       title: "LPG Distribution",
+      redirectsTo: "lpg-distribution-solutions",
       description:
         "Safe refills, reliable delivery to your doorstep. Clean cooking for every family.",
       features: ["Safe delivery", "Affordable pricing", "24/7 availability"],
-      buttonText: "Shop Now",
+      buttonText: "Explore Solutions",
       bgColor: "bg-orange-50",
       buttonColor:
         "bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700",
@@ -19,6 +21,7 @@ const SolutionsSection = () => {
       id: 2,
       icon: <FiSun className="w-8 h-8 text-yellow-500" />,
       title: "Solar Energy",
+      redirectsTo: "solar-energy-solutions",
       description:
         "Home systems, boreholes & commercial setups. Harness the power of the sun.",
       features: [
@@ -26,7 +29,7 @@ const SolutionsSection = () => {
         "Commercial systems",
         "Maintenance included",
       ],
-      buttonText: "Request Quote",
+      buttonText: "Explore Solutions",
       bgColor: "bg-yellow-50",
       buttonColor:
         "bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700",
@@ -35,10 +38,11 @@ const SolutionsSection = () => {
       id: 3,
       icon: <LuLeafyGreen className="w-8 h-8 text-green-500" />,
       title: "Biogas Solutions",
+      redirectsTo: "biogas-solutions",
       description:
         "Clean cooking from farm waste. Transform waste into clean energy.",
       features: ["Waste to energy", "Eco-friendly", "Cost effective"],
-      buttonText: "Learn More",
+      buttonText: "Explore Solutions",
       bgColor: "bg-green-50",
       buttonColor:
         "bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700",
@@ -47,6 +51,7 @@ const SolutionsSection = () => {
       id: 4,
       icon: <FiDroplet className="w-8 h-8 text-blue-500" />,
       title: "Solar Boreholes",
+      redirectsTo: "solar-boreholes-solutions",
       description:
         "Sustainable water for communities. Solar-powered water solutions.",
       features: ["Community water", "Solar powered", "Sustainable access"],
@@ -99,11 +104,12 @@ const SolutionsSection = () => {
                   ))}
                 </ul>
 
-                <button
+                <Link
+                  href={`/solutions/category/${solution.redirectsTo}`}
                   className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-white ${solution.buttonColor} shadow-sm h-10 px-4 py-2 w-full transition-all duration-200`}
                 >
                   {solution.buttonText}
-                </button>
+                </Link>
               </div>
             </div>
           ))}
