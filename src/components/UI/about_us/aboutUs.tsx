@@ -29,7 +29,7 @@ export default function AboutUsPage() {
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              About <span className="text-green-300">LidienVentures</span>
+              About <span className="text-green-300">Lidien Ventures</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed font-light max-w-3xl mx-auto">
               Pioneering Kenya&lsquo;s renewable energy revolution with
@@ -211,74 +211,6 @@ export default function AboutUsPage() {
                 </h4>
                 <p className="text-green-700 leading-relaxed font-light text-sm">
                   {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-24 bg-white relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-25 to-emerald-25"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-green-500 font-semibold text-sm uppercase tracking-wider bg-green-100 px-3 py-1 rounded-full">
-              Our Leadership
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-green-900 mt-4 mb-6">
-              Meet Our <span className="text-green-600">Team</span>
-            </h2>
-            <p className="text-green-700 text-lg font-light">
-              The passionate professionals driving our mission for a
-              sustainable, energy-independent Kenya
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "John Doe",
-                role: "Chief Executive Officer",
-                image: "/images/teammate.jpg",
-                bio: "15+ years in renewable energy leadership. Passionate about sustainable development and green technology innovation.",
-              },
-              {
-                name: "Jane Smith",
-                role: "Technical Director",
-                image: "/images/teammate.jpg",
-                bio: "Solar engineering expert with numerous successful large-scale installations and sustainable energy projects.",
-              },
-              {
-                name: "Mike Johnson",
-                role: "Operations Manager",
-                image: "/images/teammate.jpg",
-                bio: "Ensures flawless project execution and maintains our high quality standards for sustainable energy solutions.",
-              },
-            ].map((member, index) => (
-              <div
-                key={index}
-                className="group text-center bg-gradient-to-br from-white to-green-25 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-green-100"
-              >
-                <div className="relative mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden shadow-lg">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm">
-                    ✓
-                  </div>
-                </div>
-                <h4 className="text-xl font-bold text-green-900 mb-2">
-                  {member.name}
-                </h4>
-                <p className="text-green-500 font-semibold mb-4 bg-green-100 px-4 py-1.5 rounded-full text-sm inline-block">
-                  {member.role}
-                </p>
-                <p className="text-green-700 text-sm leading-relaxed font-light">
-                  {member.bio}
                 </p>
               </div>
             ))}

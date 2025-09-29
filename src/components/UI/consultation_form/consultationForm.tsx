@@ -150,7 +150,7 @@ const ConsultationForm = () => {
                   </div>
                   <div className="flex-1">
                     <div className="font-medium text-gray-900 text-sm md:text-base">
-                      +254 712 345 678
+                      +254 724 796 406
                     </div>
                     <div className="text-gray-600 text-xs md:text-sm mt-1">
                       24/7 Support Available
@@ -178,7 +178,7 @@ const ConsultationForm = () => {
                   </div>
                   <div className="flex-1">
                     <div className="font-medium text-gray-900 text-sm md:text-base">
-                      Riverside Drive
+                      Afya Business Plaza
                     </div>
                     <div className="text-gray-600 text-xs md:text-sm mt-1">
                       Nairobi, Kenya

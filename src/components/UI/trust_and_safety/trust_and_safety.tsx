@@ -4,7 +4,6 @@ import {
   FiClock,
   FiDollarSign,
   FiCheckCircle,
-  FiPhone,
 } from "react-icons/fi";
 
 const TrustSafetySection = () => {
@@ -103,7 +102,7 @@ const TrustSafetySection = () => {
             <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
               <FiCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
               <span className="text-sm font-medium text-gray-800">
-                Local Authority Approved
+                Approved By EPRA
               </span>
             </div>
 

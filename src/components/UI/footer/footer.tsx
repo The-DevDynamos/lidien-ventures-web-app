@@ -110,36 +110,20 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/insights"
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Insights
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/about_us"
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  Conversations
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-white transition-colors"
-                >
-                  Customer Support
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-white transition-colors"
-                >
-                  Safety Notice
-                </a>
+                  About Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -168,15 +152,17 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <FaPhone className="w-5 h-5 text-solar" />
-                <span className="text-white/80">+254-1-234-5678</span>
+                <span className="text-white/80">+254-724-796-406</span>
               </div>
               <div className="flex items-center gap-3">
                 <FaEnvelope className="w-5 h-5 text-solar" />
-                <span className="text-white/80">info@ Lidienventures.com</span>
+                <span className="text-white/80">info@lidienventures.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <FaMapMarkerAlt className="w-5 h-5 text-solar" />
-                <span className="text-white/80">Nairobi, Kenya</span>
+                <span className="text-white/80">
+                  Afya Business Plaza, Nairobi, Kenya
+                </span>
               </div>
             </div>
           </div>
@@ -189,26 +175,6 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-white/80 text-sm">
               © 2025 Lidienventures. All rights reserved.
-            </div>
-            <div className="flex gap-6 text-sm">
-              <a
-                href="#"
-                className="text-white/80 hover:text-white transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-white/80 hover:text-white transition-colors"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="#"
-                className="text-white/80 hover:text-white transition-colors"
-              >
-                Safety Notice
-              </a>
             </div>
           </div>
         </div>

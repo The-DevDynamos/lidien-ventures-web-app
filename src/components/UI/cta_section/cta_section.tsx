@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FiZap, FiArrowRight } from "react-icons/fi";
 
 const CTASection = () => {
@@ -34,14 +35,20 @@ const CTASection = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <button className="inline-flex items-center justify-center gap-2 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 h-14 rounded-lg text-lg px-8 py-4 bg-white text-green-700 hover:bg-white/90">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 h-14 rounded-lg text-lg px-8 py-4 bg-white text-green-700 hover:bg-white/90"
+            >
               Get a Free Quote
               <FiArrowRight className="ml-2 w-5 h-5" />
-            </button>
+            </Link>
 
-            <button className="inline-flex items-center justify-center gap-2 font-medium border-2 bg-transparent transition-all duration-200 h-14 rounded-lg text-lg px-8 py-4 border-white text-white hover:bg-white/20">
+            <Link
+              href="/shop"
+              className="inline-flex items-center justify-center gap-2 font-medium border-2 bg-transparent transition-all duration-200 h-14 rounded-lg text-lg px-8 py-4 border-white text-white hover:bg-white/20"
+            >
               Shop Now
-            </button>
+            </Link>
           </div>
 
           {/* Statistics */}
