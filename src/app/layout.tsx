@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "@/providers/reduxProvider";
+import { Suspense } from "react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -33,7 +34,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${outfit.variable} font-sans antialiased`}
       >
-        <ReduxProvider>{children}</ReduxProvider>
+        <ReduxProvider>
+          <Suspense>{children}</Suspense>
+        </ReduxProvider>
       </body>
     </html>
   );

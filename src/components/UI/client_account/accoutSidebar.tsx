@@ -1,4 +1,3 @@
-// app/my-account/components/AccountSidebar.tsx
 import React from "react";
 
 interface AccountSidebarProps {
@@ -17,15 +16,15 @@ const AccountSidebar: React.FC<AccountSidebarProps> = ({
   ];
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm p-6 sticky top-8 border border-gray-100">
+    <div className="bg-white rounded-2xl shadow-sm p-4 sm:p-6 sticky top-8 border border-gray-100">
       <div className="space-y-2">
         {menuItems.map((item) => (
           <button
             key={item.key}
             onClick={() => onTabChange(item.key)}
-            className={`w-full flex items-center space-x-3 px-4 py-4 rounded-xl transition-all duration-200 ${
+            className={`w-full flex items-center space-x-3 px-4 py-3 sm:py-4 rounded-xl transition-all duration-200 ${
               activeTab === item.key
-                ? "bg-gradient-to-r from-orange-50 to-orange-100 text-orange-600 font-semibold border border-orange-200 shadow-sm"
+                ? "bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 font-semibold border border-green-200 shadow-sm"
                 : "text-gray-600 hover:bg-gray-50 hover:shadow-sm"
             }`}
           >
@@ -36,16 +35,16 @@ const AccountSidebar: React.FC<AccountSidebarProps> = ({
       </div>
 
       {/* Support Card */}
-      <div className="mt-8 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
+      <div className="mt-6 sm:mt-8 p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-100">
         <div className="text-center">
           <div className="text-2xl mb-2">💬</div>
-          <h4 className="font-semibold text-blue-900 text-sm mb-1">
+          <h4 className="font-semibold text-green-900 text-sm mb-1">
             Need Help?
           </h4>
-          <p className="text-blue-700 text-xs mb-3">
+          <p className="text-green-700 text-xs mb-3">
             Our support team is here for you
           </p>
-          <button className="w-full bg-white text-blue-600 hover:bg-blue-50 text-sm font-medium py-2 px-4 rounded-lg border border-blue-200 transition-colors duration-200">
+          <button className="w-full bg-white text-green-600 hover:bg-green-50 text-sm font-medium py-2 px-4 rounded-lg border border-green-200 transition-colors duration-200">
             Contact Support
           </button>
         </div>
