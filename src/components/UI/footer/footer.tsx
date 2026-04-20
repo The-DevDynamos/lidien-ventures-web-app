@@ -174,7 +174,7 @@ const Footer: React.FC = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-white/80 text-sm">
-              © 2025 Lidienventures. All rights reserved.
+              © {new Date().getFullYear()} Lidienventures. All rights reserved.
             </div>
           </div>
         </div>
